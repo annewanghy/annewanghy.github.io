@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-03-04T17:07:36&#43;08:00" />
 <meta itemprop="dateModified" content="2018-03-04T17:07:36&#43;08:00" />
-<meta itemprop="wordCount" content="135">
+<meta itemprop="wordCount" content="157">
 
 
 
@@ -169,6 +169,7 @@
 <li><a href="#install-hugo-on-mac-os-use-brew">Install hugo on mac-os use brew</a>
 <ul>
 <li><a href="#use-github-pages">Use github pages</a></li>
+<li><a href="#add-shell-file-to-auto-deploy">Add shell file to auto deploy</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -207,6 +208,15 @@
 4. git add remote origin https://github.com/annewanghy/annewanghy.github.io.git
 5. git add .
 6. git push
+</code></pre>
+
+<h3 id="add-shell-file-to-auto-deploy">Add shell file to auto deploy</h3>
+
+<pre><code class="language-shell">hugo --theme=even --buildDrafts --baseUrl=&quot;https://annewanghy.github.io/&quot;
+cd public
+git add .
+git commit -m &quot;Update blog&quot;
+git push
 </code></pre>
 
     </div>
