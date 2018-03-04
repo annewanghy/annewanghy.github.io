@@ -35,3 +35,7 @@ mkdir project
 cd project
 cd ../
 ```
+
+### test image
+
+![avatar](/images/avatar.jpeg)

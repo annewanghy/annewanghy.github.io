@@ -26,7 +26,7 @@
       <pubDate>Sun, 04 Mar 2018 16:53:51 +0800</pubDate>
       
       <guid>https://annewanghy.github.io/post/test-markdown/</guid>
-      <description> test html &amp;lt;div&amp;gt;AAA&amp;lt;/div&amp;gt;  test css span { font-size: 10px; }  test js var username = document.getElementById(&amp;quot;name&amp;quot;);  test jsx import react from &amp;quot;react&amp;quot;; const A = () =&amp;gt; &amp;lt;div&amp;gt;A&amp;lt;/div&amp;gt;; export default A;  test shell mkdir project cd project cd ../  </description>
+      <description> test html &amp;lt;div&amp;gt;AAA&amp;lt;/div&amp;gt;  test css span { font-size: 10px; }  test js var username = document.getElementById(&amp;quot;name&amp;quot;);  test jsx import react from &amp;quot;react&amp;quot;; const A = () =&amp;gt; &amp;lt;div&amp;gt;A&amp;lt;/div&amp;gt;; export default A;  test shell mkdir project cd project cd ../  test image </description>
     </item>
     
   </channel>
