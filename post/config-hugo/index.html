@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-03-04T17:07:36&#43;08:00" />
 <meta itemprop="dateModified" content="2018-03-04T17:07:36&#43;08:00" />
-<meta itemprop="wordCount" content="92">
+<meta itemprop="wordCount" content="135">
 
 
 
@@ -166,7 +166,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#install-hugo-on-mac-os-use-brew">Install hugo on mac-os use brew</a></li>
+<li><a href="#install-hugo-on-mac-os-use-brew">Install hugo on mac-os use brew</a>
+<ul>
+<li><a href="#use-github-pages">Use github pages</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -190,6 +193,20 @@
 8.  git init
 9.  echo &quot;themes/&quot; &gt;&gt; .gitignore
 10. echo &quot;public&quot; &gt;&gt; .gitignore
+11. git init
+12. git add remote origin https://github.com/annewanghy/hugo-blog.git
+12. git add .
+13. git push
+</code></pre>
+
+<h3 id="use-github-pages">Use github pages</h3>
+
+<pre><code>1. hugo --theme=even --buildDrafts --baseUrl=&quot;https://annewanghy.github.io/&quot;
+2. cd public
+3. git init
+4. git add remote origin https://github.com/annewanghy/annewanghy.github.io.git
+5. git add .
+6. git push
 </code></pre>
 
     </div>
