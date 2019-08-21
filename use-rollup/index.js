@@ -1,5 +1,5 @@
-const { add } = require("./math");
+import { add } from "./math";
+import "./style.less";
 
-add(1, 2);
-
+console.log(add(1, 2));
 console.log("hello world");

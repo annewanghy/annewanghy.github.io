@@ -1,4 +1,5 @@
 import analyze from "rollup-plugin-analyzer";
+import less from "rollup-plugin-less";
 
 export default {
   input: "index.js",
@@ -6,5 +7,5 @@ export default {
     file: "./dist/bundle.rollup.js",
     format: "cjs"
   },
-  plugins: [analyze()]
+  plugins: [analyze(), less()]
 };
