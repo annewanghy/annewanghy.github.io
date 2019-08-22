@@ -1,6 +1,7 @@
 import _ from "lodash";
 import "./style.css";
 import MyImage from "./my-image.png";
+import data from "./data.json";
 
 function component() {
   const element = document.createElement("div");
@@ -17,3 +18,4 @@ function component() {
 }
 
 document.body.appendChild(component());
+console.log(data);
