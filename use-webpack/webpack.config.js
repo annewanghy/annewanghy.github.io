@@ -1,11 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   optimization: {
-    usedExports: true
+    // Information collected by optimization.usedExports is used by other optimizations or code generation
+    usedExports: true,
+    minimize: true
   },
   entry: {
     app: "./src/index.js"
@@ -36,7 +39,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Output Management"
-    })
+    }),
+    new TerserPlugin()
   ],
   output: {
     filename: "bundle.js",
