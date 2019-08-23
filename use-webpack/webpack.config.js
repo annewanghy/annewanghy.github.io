@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   optimization: {
     // Information collected by optimization.usedExports is used by other optimizations or code generation
     usedExports: true,
