@@ -19,20 +19,16 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <h1>hello, I'm anne</h1>
-    <button onclick="pushData()">click to push data</button>
+    <button onclick="pushData(['Anne', 'Tom', 'John'])">click to first data</button>
+     <button onclick="pushData(['Amy'])">click to last data</button>
 
     <script>
-    let names = [];
-
-    function pushData() {
-      names.push(Math.random()*1000)
-
+    function pushData(names) {
       dataLayer.push({
         "event": "uploadName",
         "names": names
       })
     }
-    console.log(names)
     </script>
   </body>
 </html>
