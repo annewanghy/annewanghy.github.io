@@ -25,6 +25,10 @@
     <script>
     function pushData(names) {
       dataLayer.push({
+        "names": undefined
+      });
+      
+      dataLayer.push({
         "event": "uploadName",
         "names": names
       })
