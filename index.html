@@ -36,7 +36,7 @@
       click to first data
     </button>
     <button onclick="pushData(['Amy'])">click to last data</button>
-    <button id="clickPassive">test click passive</button>
+    <button id="clickPassive" href="www.baidu.com">test click passive</button>
 
     <script>
       function pushData(names) {
@@ -51,7 +51,7 @@
       }
 
       const clickPassiveButton = document.getElementById("clickPassive");
-      console.log("clickPassiveButton", clickPassiveButton);
+
       clickPassiveButton.addEventListener(
         "click",
         function(e) {
