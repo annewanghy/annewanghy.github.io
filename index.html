@@ -53,11 +53,15 @@
 
       const clickPassiveButton = document.getElementById("clickPassive");
 
-      clickPassiveButton.addEventListener(
+      document.addEventListener(
         "click",
         function(e) {
+          console.log("e", e.target);
           e.preventDefault();
-          console.log("click on clickPassiveButton");
+
+          if (e.target === clickPassiveButton) {
+            console.log("click on clickPassiveButton");
+          }
         },
         {
           passive: true
