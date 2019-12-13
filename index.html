@@ -36,7 +36,9 @@
       click to first data
     </button>
     <button onclick="pushData(['Amy'])">click to last data</button>
-    <button id="clickPassive">test click passive</button>
+    <form>
+      <button id="clickPassive" onclick="submit()">test click passive</button>
+    </form>
 
     <script>
       function pushData(names) {
@@ -62,6 +64,10 @@
           passive: true
         }
       );
+
+      function submit() {
+        console.log("submit");
+      }
     </script>
   </body>
 </html>
