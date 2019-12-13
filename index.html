@@ -6,33 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TT5TR3P');</script>
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TT5TR3P");
+    </script>
     <!-- End Google Tag Manager -->
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT5TR3P"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TT5TR3P"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <h1>hello, I'm anne</h1>
-    <button onclick="pushData(['Anne', 'Tom', 'John'])">click to first data</button>
-     <button onclick="pushData(['Amy'])">click to last data</button>
+    <button onclick="pushData(['Anne', 'Tom', 'John'])">
+      click to first data
+    </button>
+    <button onclick="pushData(['Amy'])">click to last data</button>
+    <button id="clickPassive">test click passive</button>
 
     <script>
-    function pushData(names) {
-      dataLayer.push({
-        "names": undefined
-      });
-      
-      dataLayer.push({
-        "event": "uploadName",
-        "names": names
-      })
-    }
+      function pushData(names) {
+        dataLayer.push({
+          names: undefined
+        });
+
+        dataLayer.push({
+          event: "uploadName",
+          names: names
+        });
+      }
+
+      const clickPassiveButton = document.getElementById("clickPassive");
+      console.log("clickPassiveButton", clickPassiveButton);
+      clickPassiveButton.addEventListener(
+        "click",
+        function(e) {
+          console.log("click on clickPassiveButton");
+        },
+        {
+          passive: true
+        }
+      );
     </script>
   </body>
 </html>
