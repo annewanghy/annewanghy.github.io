@@ -4095,6 +4095,7 @@ console.log("enter annewang fbevents");
           }
 
           function p(a) {
+            console.log("enter p ,a", a);
             var b =
               arguments.length > 1 && arguments[1] !== void 0
                 ? arguments[1]
@@ -4115,6 +4116,7 @@ console.log("enter annewang fbevents");
           }
 
           function q(a, b, f) {
+            console.log("enter q", a, b, f);
             f = f.validationSchema;
             var h = [];
             for (var i in f)
@@ -4132,6 +4134,7 @@ console.log("enter annewang fbevents");
                     var o = !0;
                     switch (k.type) {
                       case d:
+                        console.log("enter d", k.type);
                         k =
                           (typeof l === "string" || typeof l === "number") &&
                           c.test("" + l);
@@ -4145,6 +4148,7 @@ console.log("enter annewang fbevents");
                         o = k;
                         break;
                       case e:
+                        console.log("enter e", k.type);
                         o = typeof l === "string" && !!g[l.toUpperCase()];
                         break;
                     }
@@ -8394,7 +8398,7 @@ console.log("enter annewang fbevents");
           }
 
           function ia(a, b, c) {
-            console.log("enter ia", a, b, c);
+            console.log("enter ia with more detail", a, b, c);
             console.log("validateeventlog", validateEventlog);
 
             (b = b || {}),
