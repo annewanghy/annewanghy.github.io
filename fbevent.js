@@ -6966,6 +6966,7 @@ fbq.pendingConfigs = ["global_config"];
       })(a, b, c, d);
     });
     f.ensureModuleRegistered("signalsFBEventsSendEvent", function() {
+      console.log("enter signalsFBEventsSendEvent");
       return (function(g, h, i, j) {
         var k = {
           exports: {}
@@ -8524,13 +8525,15 @@ fbq.pendingConfigs = ["global_config"];
               var a = new ga({
                 allowDuplicatePageViews: !0
               });
-              U.call(a, "trackCustom", "PageView");
+              console.log("comment u.call pageview");
+              //   U.call(a, "trackCustom", "PageView");
             });
+            console.log("comment u.call pageview");
             u(k, "pushState", b);
             u(k, "replaceState", b);
             // g.addEventListener("popstate", b, !1);
             console.log("set popstate passive to true");
-            g.addEventListener("popstate", b, { passive: true });
+            // g.addEventListener("popstate", b, { passive: true });
           }
           G.listenOnce(function() {
             ma();
