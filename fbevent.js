@@ -5773,6 +5773,7 @@ fbq.pendingConfigs = ["global_config"];
     );
     f.ensureModuleRegistered("signalsFBEventsInjectMethod", function() {
       return (function(g, h, i, j) {
+        console.log("enter ensureModuleRegistered", g, h, i, j);
         var k = {
           exports: {}
         };
@@ -8529,7 +8530,7 @@ fbq.pendingConfigs = ["global_config"];
               U.call(a, "trackCustom", "PageView");
             });
             console.log("comment u.call pageview");
-            // u(k, "pushState", b);
+            u(k, "pushState", b);
             //u(k, "replaceState", b);
             // g.addEventListener("popstate", b, !1);
           }
