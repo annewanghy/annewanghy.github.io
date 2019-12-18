@@ -8516,10 +8516,10 @@ fbq.pendingConfigs = ["global_config"];
 
           function ma() {
             console.log(
-              "enter ma, un comment part of pushState, and replace state"
+              "enter ma, not comment part of pushState, and replace state"
             );
             if (a.disablePushState === !0) return;
-            // if (!k.pushState || !k.replaceState) return;
+            if (!k.pushState || !k.replaceState) return;
             var b = v(function() {
               Q = L;
               L = i.href;
