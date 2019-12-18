@@ -8526,8 +8526,8 @@ fbq.pendingConfigs = ["global_config"];
               var a = new ga({
                 allowDuplicatePageViews: !0
               });
-              console.log("comment u.call pageview for test");
-              //   U.call(a, "trackCustom", "PageView");
+              console.log("un comment u.call pageview");
+              U.call(a, "trackCustom", "PageView");
             });
             console.log("comment u.call pageview");
             // u(k, "pushState", b);
