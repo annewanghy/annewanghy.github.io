@@ -8150,8 +8150,7 @@ console.log("enter annewang fbevents");
                     console.log("comment track");
                     break;
                   }
-                  //   ia.apply(this, d);
-                  console.log("comment ia");
+                  ia.apply(this, d);
                   break;
                 case "trackCustom":
                   Y.apply(this, d);
@@ -8393,6 +8392,9 @@ console.log("enter annewang fbevents");
           }
 
           function ia(a, b, c) {
+            console.log("enter ia", a, b, c);
+            console.log("validateeventlog", validateEventlog);
+
             (b = b || {}),
               p.validateEventAndLog(a, b),
               a === "CustomEvent" &&
@@ -8402,35 +8404,36 @@ console.log("enter annewang fbevents");
           }
 
           function Y(a, b, c) {
-            for (var d = 0, e = O.length; d < e; d++) {
-              var f = O[d];
-              if (
-                !(a === "PageView" && this.allowDuplicatePageViews) &&
-                Object.prototype.hasOwnProperty.call(R, a) &&
-                R[a].has(f.id)
-              ) {
-                console.log("isPageView");
-                continue;
-              }
+            console.log("enter Y", a, b, c);
+            // for (var d = 0, e = O.length; d < e; d++) {
+            //   var f = O[d];
+            //   if (
+            //     !(a === "PageView" && this.allowDuplicatePageViews) &&
+            //     Object.prototype.hasOwnProperty.call(R, a) &&
+            //     R[a].has(f.id)
+            //   ) {
+            //     console.log("isPageView");
+            //     continue;
+            //   }
 
-              console.log(
-                "enter submit",
-                "customData",
-                b,
-                "eventData",
-                c,
-                "eventName",
-                a
-              );
+            //   console.log(
+            //     "enter submit",
+            //     "customData",
+            //     b,
+            //     "eventData",
+            //     c,
+            //     "eventName",
+            //     a
+            //   );
 
-              $({
-                customData: b,
-                eventData: c,
-                eventName: a,
-                pixel: f
-              });
-              Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
-            }
+            //   $({
+            //     customData: b,
+            //     eventData: c,
+            //     eventName: a,
+            //     pixel: f
+            //   });
+            //   Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
+            // }
           }
 
           function ja(a, b) {
