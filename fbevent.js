@@ -8150,7 +8150,8 @@ console.log("enter annewang fbevents");
                     console.log("comment track");
                     break;
                   }
-                  ia.apply(this, d);
+                  //   ia.apply(this, d);
+                  console.log("comment ia");
                   break;
                 case "trackCustom":
                   Y.apply(this, d);
