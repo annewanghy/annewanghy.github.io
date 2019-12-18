@@ -8146,7 +8146,8 @@ console.log("enter annewang fbevents");
                   }
                   if (e) {
                     console.log(e, "args:", d);
-                    Y.apply(this, d);
+                    //Y.apply(this, d);
+                    console.log("comment track");
                     break;
                   }
                   ia.apply(this, d);
