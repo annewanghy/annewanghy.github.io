@@ -8516,20 +8516,20 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
-            console.log("enter ma, test comment pushstate", "k", k, "b", b);
+            console.log("comment all ma", "k", k, "b", b);
             // if (a.disablePushState === !0) return;
             // if (!k.pushState || !k.replaceState) return;
-            var b = v(function() {
-              Q = L;
-              L = i.href;
-              if (L === Q) return;
-              var a = new ga({
-                allowDuplicatePageViews: !0
-              });
-              console.log("un comment u.call pageview");
-              U.call(a, "trackCustom", "PageView");
-            });
-            console.log("comment u.call pageview");
+            // var b = v(function() {
+            //   Q = L;
+            //   L = i.href;
+            //   if (L === Q) return;
+            //   var a = new ga({
+            //     allowDuplicatePageViews: !0
+            //   });
+            //   console.log("un comment u.call pageview");
+            //   U.call(a, "trackCustom", "PageView");
+            // });
+            // console.log("comment u.call pageview");
             // u(k, "pushState", b);
             // u(k, "replaceState", b);
             // g.addEventListener("popstate", b, !1);
