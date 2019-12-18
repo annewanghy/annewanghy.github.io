@@ -8515,7 +8515,7 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
-            console.log("enter ma. comment all");
+            console.log("enter ma. comment part");
             if (a.disablePushState === !0) return;
             if (!k.pushState || !k.replaceState) return;
             var b = v(function() {
