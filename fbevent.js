@@ -998,7 +998,9 @@ console.log("enter annewang fbevents");
               g = function b() {
                 f && f.call(a, e, b, !1), d();
               };
-            c && c.call(a, e, g, !1);
+            // c && c.call(a, e, g, !1);
+            console.log("change passive to true");
+            c && c.call(a, e, g, { passive: true });
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -8395,6 +8397,16 @@ console.log("enter annewang fbevents");
                 console.log("isPageView");
                 continue;
               }
+
+              console.log(
+                "enter submit",
+                "customData",
+                b,
+                "eventData",
+                c,
+                "eventName",
+                a
+              );
 
               $({
                 customData: b,
