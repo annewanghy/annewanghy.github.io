@@ -7092,8 +7092,8 @@ console.log("enter annewang fbevents");
                 }),
                 f.submit();
             });
-            h.body != null && h.body.appendChild(f);
-            console.log("h.body", h.body);
+            // h.body != null && h.body.appendChild(f);
+            console.log("not append iframe h.body");
             return !0;
           }
           k.exports = d;
