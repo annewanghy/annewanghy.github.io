@@ -20,6 +20,7 @@
 fbq.version = "2.9.15";
 fbq._releaseSegment = "stable";
 fbq.pendingConfigs = ["global_config"];
+console.log('enter annewang fbevents')
 (function(a, b, c, d) {
     var e = {
         exports: {}
@@ -27,6 +28,7 @@ fbq.pendingConfigs = ["global_config"];
     e.exports;
     (function() {
         var f = a.fbq;
+        console.log('a.fbq', fbq)
         f.execStart = a.performance && a.performance.now && a.performance.now();
         if (! function() {
                 var b = a.postMessage || function() {};
