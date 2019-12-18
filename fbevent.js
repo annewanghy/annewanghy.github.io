@@ -8515,7 +8515,9 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
-            console.log("enter ma, comment all pushState, and replace state");
+            console.log(
+              "enter ma, un comment part of pushState, and replace state"
+            );
             if (a.disablePushState === !0) return;
             // if (!k.pushState || !k.replaceState) return;
             var b = v(function() {
@@ -8529,10 +8531,10 @@ fbq.pendingConfigs = ["global_config"];
               U.call(a, "trackCustom", "PageView");
             });
             console.log("comment u.call pageview");
-            // u(k, "pushState", b);
-            // u(k, "replaceState", b);
+            u(k, "pushState", b);
+            u(k, "replaceState", b);
             console.log("set popstate passive to true");
-            // g.addEventListener("popstate", b, !1);
+            g.addEventListener("popstate", b, !1);
           }
           G.listenOnce(function() {
             ma();
