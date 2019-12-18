@@ -33,6 +33,8 @@ console.log("enter annewang fbevents");
     if (
       !(function() {
         var b = a.postMessage || function() {};
+        console.log("a.postMessage", a.postMessage);
+
         if (!f) {
           b(
             {
@@ -7061,39 +7063,39 @@ console.log("enter annewang fbevents");
             console.log("submitByPost");
 
             b.replaceEntry("rqm", "formPOST");
-            var e =
-                "fb" +
-                Math.random()
-                  .toString()
-                  .replace(".", ""),
-              f = h.createElement("form");
-            f.method = "post";
-            f.action = d != null ? d : a.ENDPOINT;
-            f.target = e;
-            f.acceptCharset = "utf-8";
-            f.style.display = "none";
-            d = !!(g.attachEvent && !g.addEventListener);
-            var i = h.createElement("iframe");
-            d && (i.name = e);
-            i.src = "about:blank";
-            i.id = e;
-            i.name = e;
-            f.appendChild(i);
-            c(i, "load", function() {
-              b.each(function(a, b) {
-                console.log("comment input", "a", a, "b", b);
-                // var c = h.createElement("input");
-                // c.name = decodeURIComponent(a);
-                // c.value = b;
-                // f.appendChild(c);
-              }),
-                c(i, "load", function() {
-                  f.parentNode && f.parentNode.removeChild(f);
-                }),
-                f.submit();
-            });
+            // var e =
+            //     "fb" +
+            //     Math.random()
+            //       .toString()
+            //       .replace(".", ""),
+            //   f = h.createElement("form");
+            // f.method = "post";
+            // f.action = d != null ? d : a.ENDPOINT;
+            // f.target = e;
+            // f.acceptCharset = "utf-8";
+            // f.style.display = "none";
+            // d = !!(g.attachEvent && !g.addEventListener);
+            // var i = h.createElement("iframe");
+            // d && (i.name = e);
+            // i.src = "about:blank";
+            // i.id = e;
+            // i.name = e;
+            // f.appendChild(i);
+            // c(i, "load", function() {
+            //   b.each(function(a, b) {
+            //     console.log("comment input", "a", a, "b", b);
+            //     // var c = h.createElement("input");
+            //     // c.name = decodeURIComponent(a);
+            //     // c.value = b;
+            //     // f.appendChild(c);
+            //   }),
+            //     c(i, "load", function() {
+            //       f.parentNode && f.parentNode.removeChild(f);
+            //     }),
+            //     f.submit();
+            // });
             // h.body != null && h.body.appendChild(f);
-            console.log("not append iframe h.body");
+            console.log("comment form submit");
             return !0;
           }
           k.exports = d;
