@@ -8142,15 +8142,11 @@ fbq.pendingConfigs = ["global_config"];
                 case "track":
                   console.log("enter track");
                   if (E(d[0])) {
-                    console.log("d[0]", d[0], d);
-                    console.log("comment track");
                     // ja.apply(this, d);
                     break;
                   }
                   if (e) {
-                    console.log(e, "args:", d);
                     //Y.apply(this, d);
-                    console.log("comment track");
                     break;
                   }
                   ia.apply(this, d);
@@ -8485,14 +8481,16 @@ fbq.pendingConfigs = ["global_config"];
               c = c.eventID;
               f.append("eid", c);
             }
-            console.log("going to e");
-            // e({
-            //   customData: b,
-            //   customParams: f,
-            //   eventName: d,
-            //   id: a ? a.id : null,
-            //   piiTranslator: null
-            // });
+
+            // find the reuslt
+            console.log("b", b, "f", f, "d", d, "a", a);
+            e({
+              customData: b,
+              customParams: f,
+              eventName: d,
+              id: a ? a.id : null,
+              piiTranslator: null
+            });
           }
 
           function la() {
