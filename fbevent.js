@@ -8400,12 +8400,12 @@ fbq.pendingConfigs = ["global_config"];
           function ia(a, b, c) {
             console.log("enter ia with more detail", a, b, c);
 
-            // (b = b || {}),
-            //   p.validateEventAndLog(a, b),
-            //   a === "CustomEvent" &&
-            //     typeof b.event === "string" &&
-            //     (a = b.event),
-            //   Y.call(this, a, b, c);
+            (b = b || {}),
+              p.validateEventAndLog(a, b),
+              a === "CustomEvent" &&
+                typeof b.event === "string" &&
+                (a = b.event),
+              Y.call(this, a, b, c);
             Y.call(this, a, b, c);
           }
 
@@ -8432,14 +8432,14 @@ fbq.pendingConfigs = ["global_config"];
                 a
               );
 
-              $({
-                customData: b,
-                eventData: c,
-                eventName: a,
-                pixel: f
-              });
-              console.log("sumbit data");
-              Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
+              //   $({
+              //     customData: b,
+              //     eventData: c,
+              //     eventName: a,
+              //     pixel: f
+              //   });
+              //   console.log("sumbit data");
+              //   Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
             }
           }
 
