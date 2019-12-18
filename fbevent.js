@@ -8494,6 +8494,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function la() {
+            console.log("enter la");
             while (a.queue.length && !I.isLocked()) {
               var b = a.queue.shift();
               U.apply(a, b);
@@ -8513,6 +8514,7 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
+            console.log("enter ma");
             if (a.disablePushState === !0) return;
             if (!k.pushState || !k.replaceState) return;
             var b = v(function() {
