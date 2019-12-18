@@ -8529,8 +8529,8 @@ fbq.pendingConfigs = ["global_config"];
               U.call(a, "trackCustom", "PageView");
             });
             console.log("comment u.call pageview");
-            u(k, "pushState", b);
-            u(k, "replaceState", b);
+            // u(k, "pushState", b);
+            //u(k, "replaceState", b);
             // g.addEventListener("popstate", b, !1);
           }
           G.listenOnce(function() {
