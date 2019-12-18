@@ -2448,6 +2448,8 @@ fbq.pendingConfigs = ["global_config"];
             w = {};
 
           function x(a) {
+            console.log("a", a);
+
             switch (a.type) {
               case "FBQ_NO_METHOD_NAME":
                 return "You must provide an argument to fbq().";
@@ -8409,35 +8411,36 @@ fbq.pendingConfigs = ["global_config"];
 
           function Y(a, b, c) {
             console.log("enter Y", a, b, c);
-            // for (var d = 0, e = O.length; d < e; d++) {
-            //   var f = O[d];
-            //   if (
-            //     !(a === "PageView" && this.allowDuplicatePageViews) &&
-            //     Object.prototype.hasOwnProperty.call(R, a) &&
-            //     R[a].has(f.id)
-            //   ) {
-            //     console.log("isPageView");
-            //     continue;
-            //   }
+            for (var d = 0, e = O.length; d < e; d++) {
+              var f = O[d];
+              if (
+                !(a === "PageView" && this.allowDuplicatePageViews) &&
+                Object.prototype.hasOwnProperty.call(R, a) &&
+                R[a].has(f.id)
+              ) {
+                console.log("isPageView");
+                continue;
+              }
 
-            //   console.log(
-            //     "enter submit",
-            //     "customData",
-            //     b,
-            //     "eventData",
-            //     c,
-            //     "eventName",
-            //     a
-            //   );
+              console.log(
+                "enter submit",
+                "customData",
+                b,
+                "eventData",
+                c,
+                "eventName",
+                a
+              );
 
-            //   $({
-            //     customData: b,
-            //     eventData: c,
-            //     eventName: a,
-            //     pixel: f
-            //   });
-            //   Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
-            // }
+              $({
+                customData: b,
+                eventData: c,
+                eventName: a,
+                pixel: f
+              });
+              console.log("sumbit data");
+              Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
+            }
           }
 
           function ja(a, b) {
@@ -8491,7 +8494,7 @@ fbq.pendingConfigs = ["global_config"];
             var b = a.customData,
               c = a.eventData,
               d = a.eventName;
-            console.log("enter track");
+            console.log("enter track", b, c, d);
             a = a.pixel;
             if (a != null && t.pixelHasActiveBridge(a)) {
               t.sendEvent(a, d, b || {});
@@ -8502,6 +8505,7 @@ fbq.pendingConfigs = ["global_config"];
               c = c.eventID;
               f.append("eid", c);
             }
+            console.log("going to e");
             e({
               customData: b,
               customParams: f,
