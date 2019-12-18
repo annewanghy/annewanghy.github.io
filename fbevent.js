@@ -4161,6 +4161,8 @@ console.log("enter annewang fbevents");
           }
 
           function r(a, c) {
+            console.log("a", a, "c", c);
+
             a = p(a, c);
             a.error && b(a.error);
             if (a.warnings)
