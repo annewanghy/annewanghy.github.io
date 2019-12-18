@@ -3205,7 +3205,9 @@ console.log("enter annewang fbevents");
               g = function b() {
                 f && f.call(a, e, b, !1), d();
               };
-            c && c.call(a, e, g, !1);
+            // c && c.call(a, e, g, !1);
+            console.log("set passive to true in p");
+            c && c.call(a, e, g, { passive: true });
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -7642,7 +7644,9 @@ console.log("enter annewang fbevents");
               g = function b() {
                 f && f.call(a, e, b, !1), d();
               };
-            c && c.call(a, e, g, !1);
+            // c && c.call(a, e, g, !1);
+            console.log("set passive to true in p");
+            c && c.call(a, e, g, { passive: true });
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -8528,7 +8532,9 @@ console.log("enter annewang fbevents");
             });
             u(k, "pushState", b);
             u(k, "replaceState", b);
-            g.addEventListener("popstate", b, !1);
+            // g.addEventListener("popstate", b, !1);
+            console.log("set popstate passive to true");
+            g.addEventListener("popstate", b, { passive: true });
           }
           G.listenOnce(function() {
             ma();
