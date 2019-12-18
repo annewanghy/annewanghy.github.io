@@ -7079,10 +7079,11 @@ console.log("enter annewang fbevents");
             f.appendChild(i);
             c(i, "load", function() {
               b.each(function(a, b) {
-                var c = h.createElement("input");
-                c.name = decodeURIComponent(a);
-                c.value = b;
-                f.appendChild(c);
+                console.log("comment input", "a", a, "b", b);
+                // var c = h.createElement("input");
+                // c.name = decodeURIComponent(a);
+                // c.value = b;
+                // f.appendChild(c);
               }),
                 c(i, "load", function() {
                   f.parentNode && f.parentNode.removeChild(f);
