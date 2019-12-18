@@ -6600,7 +6600,9 @@ fbq.pendingConfigs = ["global_config"];
                                     V.apply(this, d);
                                     break;
                                 case "track":
+                                    console.log('enter track')
                                     if (E(d[0])) {
+                                        console.log('d[0]', d[0], d)
                                         ja.apply(this, d);
                                         break
                                     }
