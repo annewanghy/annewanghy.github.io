@@ -7056,6 +7056,8 @@ console.log("enter annewang fbevents");
             c = b.listenOnce;
 
           function d(b, d) {
+            console.log("submitByPost");
+
             b.replaceEntry("rqm", "formPOST");
             var e =
                 "fb" +
@@ -7088,6 +7090,7 @@ console.log("enter annewang fbevents");
                 f.submit();
             });
             h.body != null && h.body.appendChild(f);
+            console.log("h.body", h.body);
             return !0;
           }
           k.exports = d;
@@ -8119,6 +8122,7 @@ console.log("enter annewang fbevents");
                   W.apply(this, d);
                   break;
                 case "init":
+                  console.log("enter init");
                   N = !0;
                   W.apply(this, d);
                   break;
@@ -8310,6 +8314,7 @@ console.log("enter annewang fbevents");
           a._initsDone = {};
 
           function W(a, b, c) {
+            console.log("a", a, "b", b, "c", c);
             J = J === -1 ? Date.now() : J;
             var d = y(a);
             if (d == null) return;
