@@ -7065,8 +7065,6 @@ fbq.pendingConfigs = ["global_config"];
             c = b.listenOnce;
 
           function d(b, d) {
-            console.log("submitByPost");
-
             b.replaceEntry("rqm", "formPOST");
             // var e =
             //     "fb" +
@@ -8155,7 +8153,6 @@ fbq.pendingConfigs = ["global_config"];
                     console.log("comment track");
                     break;
                   }
-                  console.log("go to ia");
                   ia.apply(this, d);
                   break;
                 case "trackCustom":
@@ -8398,19 +8395,15 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function ia(a, b, c) {
-            console.log("enter ia with more detail", a, b, c);
-
             (b = b || {}),
               p.validateEventAndLog(a, b),
               a === "CustomEvent" &&
                 typeof b.event === "string" &&
                 (a = b.event),
               Y.call(this, a, b, c);
-            Y.call(this, a, b, c);
           }
 
           function Y(a, b, c) {
-            console.log("enter Y", a, b, c);
             for (var d = 0, e = O.length; d < e; d++) {
               var f = O[d];
               if (
@@ -8418,33 +8411,20 @@ fbq.pendingConfigs = ["global_config"];
                 Object.prototype.hasOwnProperty.call(R, a) &&
                 R[a].has(f.id)
               ) {
-                console.log("isPageView");
                 continue;
               }
 
-              console.log(
-                "enter submit",
-                "customData",
-                b,
-                "eventData",
-                c,
-                "eventName",
-                a
-              );
-
-              //   $({
-              //     customData: b,
-              //     eventData: c,
-              //     eventName: a,
-              //     pixel: f
-              //   });
-              //   console.log("sumbit data");
-              //   Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
+              $({
+                customData: b,
+                eventData: c,
+                eventName: a,
+                pixel: f
+              });
+              Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
             }
           }
 
           function ja(a, b) {
-            console.log("enter ja", "eventName", a, "customData:", b);
             $({
               customData: b,
               eventName: a,
@@ -8506,13 +8486,13 @@ fbq.pendingConfigs = ["global_config"];
               f.append("eid", c);
             }
             console.log("going to e");
-            e({
-              customData: b,
-              customParams: f,
-              eventName: d,
-              id: a ? a.id : null,
-              piiTranslator: null
-            });
+            // e({
+            //   customData: b,
+            //   customParams: f,
+            //   eventName: d,
+            //   id: a ? a.id : null,
+            //   piiTranslator: null
+            // });
           }
 
           function la() {
