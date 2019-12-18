@@ -8140,7 +8140,8 @@ console.log("enter annewang fbevents");
                   console.log("enter track");
                   if (E(d[0])) {
                     console.log("d[0]", d[0], d);
-                    ja.apply(this, d);
+                    console.log("comment track");
+                    // ja.apply(this, d);
                     break;
                   }
                   if (e) {
