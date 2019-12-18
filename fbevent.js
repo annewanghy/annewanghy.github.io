@@ -20,7 +20,8 @@
 fbq.version = "2.9.15";
 fbq._releaseSegment = "stable";
 fbq.pendingConfigs = ["global_config"];
-console.log("enter annewang fbevents")(function(a, b, c, d) {
+console.log("enter annewang fbevents");
+(function(a, b, c, d) {
   var e = {
     exports: {}
   };
@@ -8390,8 +8391,11 @@ console.log("enter annewang fbevents")(function(a, b, c, d) {
                 !(a === "PageView" && this.allowDuplicatePageViews) &&
                 Object.prototype.hasOwnProperty.call(R, a) &&
                 R[a].has(f.id)
-              )
+              ) {
+                console.log("isPageView");
                 continue;
+              }
+
               $({
                 customData: b,
                 eventData: c,
