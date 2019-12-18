@@ -20,7 +20,6 @@
 fbq.version = "2.9.15";
 fbq._releaseSegment = "stable";
 fbq.pendingConfigs = ["global_config"];
-console.log("enter annewang fbevents");
 (function(a, b, c, d) {
   var e = {
     exports: {}
@@ -28,12 +27,10 @@ console.log("enter annewang fbevents");
   e.exports;
   (function() {
     var f = a.fbq;
-    console.log("a.fbq", fbq);
     f.execStart = a.performance && a.performance.now && a.performance.now();
     if (
       !(function() {
         var b = a.postMessage || function() {};
-        console.log("a.postMessage", a.postMessage);
 
         if (!f) {
           b(
@@ -8156,6 +8153,7 @@ console.log("enter annewang fbevents");
                     console.log("comment track");
                     break;
                   }
+                  console.log("go to ia");
                   ia.apply(this, d);
                   break;
                 case "trackCustom":
@@ -8399,14 +8397,14 @@ console.log("enter annewang fbevents");
 
           function ia(a, b, c) {
             console.log("enter ia with more detail", a, b, c);
-            console.log("validateeventlog", validateEventlog);
 
-            (b = b || {}),
-              p.validateEventAndLog(a, b),
-              a === "CustomEvent" &&
-                typeof b.event === "string" &&
-                (a = b.event),
-              Y.call(this, a, b, c);
+            // (b = b || {}),
+            //   p.validateEventAndLog(a, b),
+            //   a === "CustomEvent" &&
+            //     typeof b.event === "string" &&
+            //     (a = b.event),
+            //   Y.call(this, a, b, c);
+            Y.call(this, a, b, c);
           }
 
           function Y(a, b, c) {
