@@ -8515,7 +8515,7 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
-            console.log("enter ma. comment part");
+            console.log("enter ma");
             if (a.disablePushState === !0) return;
             if (!k.pushState || !k.replaceState) return;
             var b = v(function() {
@@ -8526,7 +8526,7 @@ fbq.pendingConfigs = ["global_config"];
                 allowDuplicatePageViews: !0
               });
               console.log("comment u.call pageview");
-              //   U.call(a, "trackCustom", "PageView");
+              U.call(a, "trackCustom", "PageView");
             });
             // console.log("comment u.call pageview");
             // u(k, "pushState", b);
