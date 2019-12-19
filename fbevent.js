@@ -31,7 +31,6 @@ fbq.pendingConfigs = ["global_config"];
     if (
       !(function() {
         var b = a.postMessage || function() {};
-
         if (!f) {
           b(
             {
@@ -7054,37 +7053,37 @@ fbq.pendingConfigs = ["global_config"];
 
           function d(b, d) {
             b.replaceEntry("rqm", "formPOST");
-            // var e =
-            //     "fb" +
-            //     Math.random()
-            //       .toString()
-            //       .replace(".", ""),
-            //   f = h.createElement("form");
-            // f.method = "post";
-            // f.action = d != null ? d : a.ENDPOINT;
-            // f.target = e;
-            // f.acceptCharset = "utf-8";
-            // f.style.display = "none";
-            // d = !!(g.attachEvent && !g.addEventListener);
-            // var i = h.createElement("iframe");
-            // d && (i.name = e);
-            // i.src = "about:blank";
-            // i.id = e;
-            // i.name = e;
-            // f.appendChild(i);
-            // c(i, "load", function() {
-            //   b.each(function(a, b) {
-            //     // var c = h.createElement("input");
-            //     // c.name = decodeURIComponent(a);
-            //     // c.value = b;
-            //     // f.appendChild(c);
-            //   }),
-            //     c(i, "load", function() {
-            //       f.parentNode && f.parentNode.removeChild(f);
-            //     }),
-            //     f.submit();
-            // });
-            // h.body != null && h.body.appendChild(f);
+            var e =
+                "fb" +
+                Math.random()
+                  .toString()
+                  .replace(".", ""),
+              f = h.createElement("form");
+            f.method = "post";
+            f.action = d != null ? d : a.ENDPOINT;
+            f.target = e;
+            f.acceptCharset = "utf-8";
+            f.style.display = "none";
+            d = !!(g.attachEvent && !g.addEventListener);
+            var i = h.createElement("iframe");
+            d && (i.name = e);
+            i.src = "about:blank";
+            i.id = e;
+            i.name = e;
+            f.appendChild(i);
+            c(i, "load", function() {
+              b.each(function(a, b) {
+                var c = h.createElement("input");
+                c.name = decodeURIComponent(a);
+                c.value = b;
+                f.appendChild(c);
+              }),
+                c(i, "load", function() {
+                  f.parentNode && f.parentNode.removeChild(f);
+                }),
+                f.submit();
+            });
+            h.body != null && h.body.appendChild(f);
             return !0;
           }
           k.exports = d;
@@ -8116,7 +8115,6 @@ fbq.pendingConfigs = ["global_config"];
                   W.apply(this, d);
                   break;
                 case "init":
-                  console.log("enter init");
                   N = !0;
                   W.apply(this, d);
                   break;
@@ -8124,13 +8122,12 @@ fbq.pendingConfigs = ["global_config"];
                   V.apply(this, d);
                   break;
                 case "track":
-                  console.log("enter track");
                   if (E(d[0])) {
-                    // ja.apply(this, d);
+                    ja.apply(this, d);
                     break;
                   }
                   if (e) {
-                    //Y.apply(this, d);
+                    Y.apply(this, d);
                     break;
                   }
                   ia.apply(this, d);
@@ -8389,10 +8386,8 @@ fbq.pendingConfigs = ["global_config"];
                 !(a === "PageView" && this.allowDuplicatePageViews) &&
                 Object.prototype.hasOwnProperty.call(R, a) &&
                 R[a].has(f.id)
-              ) {
+              )
                 continue;
-              }
-
               $({
                 customData: b,
                 eventData: c,
@@ -8463,8 +8458,7 @@ fbq.pendingConfigs = ["global_config"];
               c = c.eventID;
               f.append("eid", c);
             }
-
-            console.log("comment e");
+            console.log("only comment e");
             // e({
             //   customData: b,
             //   customParams: f,
@@ -8494,23 +8488,20 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
-            console.log("comment all ma", "k", k, "b", b);
-            // if (a.disablePushState === !0) return;
-            // if (!k.pushState || !k.replaceState) return;
-            // var b = v(function() {
-            //   Q = L;
-            //   L = i.href;
-            //   if (L === Q) return;
-            //   var a = new ga({
-            //     allowDuplicatePageViews: !0
-            //   });
-            //   console.log("un comment u.call pageview");
-            //   U.call(a, "trackCustom", "PageView");
-            // });
-            // console.log("comment u.call pageview");
-            // u(k, "pushState", b);
-            // u(k, "replaceState", b);
-            // g.addEventListener("popstate", b, !1);
+            if (a.disablePushState === !0) return;
+            if (!k.pushState || !k.replaceState) return;
+            var b = v(function() {
+              Q = L;
+              L = i.href;
+              if (L === Q) return;
+              var a = new ga({
+                allowDuplicatePageViews: !0
+              });
+              U.call(a, "trackCustom", "PageView");
+            });
+            u(k, "pushState", b);
+            u(k, "replaceState", b);
+            g.addEventListener("popstate", b, !1);
           }
           G.listenOnce(function() {
             ma();
