@@ -8461,6 +8461,7 @@ fbq.pendingConfigs = ["global_config"];
               c = c.eventID;
               f.append("eid", c);
             }
+            console.log("only comment e");
             e({
               customData: b,
               customParams: f,
@@ -8491,9 +8492,8 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
-            console.log("enter ma");
-            //if (a.disablePushState === !0) return;
-            //if (!k.pushState || !k.replaceState) return;
+            if (a.disablePushState === !0) return;
+            if (!k.pushState || !k.replaceState) return;
             var b = v(function() {
               Q = L;
               L = i.href;
@@ -8504,14 +8504,15 @@ fbq.pendingConfigs = ["global_config"];
               U.call(a, "trackCustom", "PageView");
             });
             // when pushState
-            //u(k, "pushState", b);
+            u(k, "pushState", b);
             // when replaceState
-            //u(k, "replaceState", b);
+            u(k, "replaceState", b);
             // when pupup state
-            //g.addEventListener("popstate", b, !1);
+            g.addEventListener("popstate", b, !1);
           }
           G.listenOnce(function() {
-            ma();
+            console.log("comment ma");
+            //ma();
           });
 
           function na(b) {
