@@ -8393,13 +8393,12 @@ fbq.pendingConfigs = ["global_config"];
                 continue;
               }
 
-              console.log("comment sumbit");
-              // $({
-              //   customData: b,
-              //   eventData: c,
-              //   eventName: a,
-              //   pixel: f
-              // });
+              $({
+                customData: b,
+                eventData: c,
+                eventName: a,
+                pixel: f
+              });
               Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
             }
           }
@@ -8465,13 +8464,14 @@ fbq.pendingConfigs = ["global_config"];
               f.append("eid", c);
             }
 
-            e({
-              customData: b,
-              customParams: f,
-              eventName: d,
-              id: a ? a.id : null,
-              piiTranslator: null
-            });
+            console.log("comment e");
+            // e({
+            //   customData: b,
+            //   customParams: f,
+            //   eventName: d,
+            //   id: a ? a.id : null,
+            //   piiTranslator: null
+            // });
           }
 
           function la() {
