@@ -990,6 +990,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function p(a, c, d) {
+            // listenOnce
             var e = b ? "on" + c : c;
             c = b ? a.attachEvent : a.addEventListener;
             var f = b ? a.detachEvent : a.removeEventListener,
@@ -6978,23 +6979,25 @@ fbq.pendingConfigs = ["global_config"];
             t = "SubscribedButtonClick";
 
           function u(a) {
+            console.log("enter u", a);
             var b = a.customData,
               e = a.customParams,
               f = a.eventName,
               j = a.id;
-            a = a.piiTranslator;
-            a = new d(a);
-            a.append("id", j);
-            a.append("ev", f);
-            a.append("dl", i.href);
-            a.append("rl", h.referrer);
-            a.append("if", s);
-            a.append("ts", new Date().valueOf());
-            a.append("cd", b);
-            a.append("sw", g.screen.width);
-            a.append("sh", g.screen.height);
-            e && a.addRange(e);
-            a.appendHash(c.getCustomDataPayload());
+            console.log("b", b);
+            // a = a.piiTranslator;
+            // a = new d(a);
+            // a.append("id", j);
+            // a.append("ev", f);
+            // a.append("dl", i.href);
+            // a.append("rl", h.referrer);
+            // a.append("if", s);
+            // a.append("ts", new Date().valueOf());
+            // a.append("cd", b);
+            // a.append("sw", g.screen.width);
+            // a.append("sh", g.screen.height);
+            // e && a.addRange(e);
+            // a.appendHash(c.getCustomDataPayload());
             return a;
           }
 
@@ -7533,6 +7536,7 @@ fbq.pendingConfigs = ["global_config"];
             c = a.FBEventsCoercionError;
 
           function d(a) {
+            console.log("enter d", a);
             return function(d) {
               for (var e = 0; e < a.length; e++) {
                 var f = a[e];
@@ -8461,7 +8465,6 @@ fbq.pendingConfigs = ["global_config"];
               c = c.eventID;
               f.append("eid", c);
             }
-            console.log("only comment e");
             e({
               customData: b,
               customParams: f,
@@ -8511,8 +8514,7 @@ fbq.pendingConfigs = ["global_config"];
             g.addEventListener("popstate", b, !1);
           }
           G.listenOnce(function() {
-            console.log("comment ma");
-            //ma();
+            ma();
           });
 
           function na(b) {
