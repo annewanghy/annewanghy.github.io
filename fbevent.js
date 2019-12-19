@@ -8399,6 +8399,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function ja(a, b) {
+            // legacyConversionEvent
             $({
               customData: b,
               eventName: a,
@@ -8407,6 +8408,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function Z(a, b, c) {
+            // send
             O.forEach(function(c) {
               return $({
                 customData: b,
@@ -8445,6 +8447,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function $(a) {
+            // sumbit
             var b = a.customData,
               c = a.eventData,
               d = a.eventName;
@@ -8458,17 +8461,17 @@ fbq.pendingConfigs = ["global_config"];
               c = c.eventID;
               f.append("eid", c);
             }
-            console.log("only comment e");
-            // e({
-            //   customData: b,
-            //   customParams: f,
-            //   eventName: d,
-            //   id: a ? a.id : null,
-            //   piiTranslator: null
-            // });
+            e({
+              customData: b,
+              customParams: f,
+              eventName: d,
+              id: a ? a.id : null,
+              piiTranslator: null
+            });
           }
 
           function la() {
+            // flushQueue
             while (a.queue.length && !I.isLocked()) {
               var b = a.queue.shift();
               U.apply(a, b);
@@ -8488,8 +8491,9 @@ fbq.pendingConfigs = ["global_config"];
             });
 
           function ma() {
-            if (a.disablePushState === !0) return;
-            if (!k.pushState || !k.replaceState) return;
+            console.log("enter ma");
+            //if (a.disablePushState === !0) return;
+            //if (!k.pushState || !k.replaceState) return;
             var b = v(function() {
               Q = L;
               L = i.href;
@@ -8499,9 +8503,12 @@ fbq.pendingConfigs = ["global_config"];
               });
               U.call(a, "trackCustom", "PageView");
             });
-            u(k, "pushState", b);
-            u(k, "replaceState", b);
-            g.addEventListener("popstate", b, !1);
+            // when pushState
+            //u(k, "pushState", b);
+            // when replaceState
+            //u(k, "replaceState", b);
+            // when pupup state
+            //g.addEventListener("popstate", b, !1);
           }
           G.listenOnce(function() {
             ma();
