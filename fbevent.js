@@ -6995,8 +6995,8 @@ fbq.pendingConfigs = ["global_config"];
             a.append("cd", b);
             a.append("sw", g.screen.width);
             a.append("sh", g.screen.height);
-            console.log("a", a);
-            // e && a.addRange(e);
+            e && a.addRange(e);
+            console.log("a", a, "addrange", e);
             //a.appendHash(c.getCustomDataPayload());
             //return a;
           }
