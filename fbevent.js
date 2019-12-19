@@ -6979,15 +6979,13 @@ fbq.pendingConfigs = ["global_config"];
             t = "SubscribedButtonClick";
 
           function u(a) {
-            console.log("enter u", a);
+            console.log("enter u");
             var b = a.customData,
               e = a.customParams,
               f = a.eventName,
               j = a.id;
             a = a.piiTranslator;
-            console.log("after a", a);
             a = new d(a);
-            console.log("after new", a);
             a.append("id", j);
             a.append("ev", f);
             a.append("dl", i.href);
@@ -6997,10 +6995,10 @@ fbq.pendingConfigs = ["global_config"];
             a.append("cd", b);
             a.append("sw", g.screen.width);
             a.append("sh", g.screen.height);
-            e && a.addRange(e);
-            a.appendHash(c.getCustomDataPayload());
-            console.log("after all process", a);
-            return a;
+            console.log("a", a);
+            // e && a.addRange(e);
+            //a.appendHash(c.getCustomDataPayload());
+            //return a;
           }
 
           function v(a) {
@@ -8453,7 +8451,7 @@ fbq.pendingConfigs = ["global_config"];
 
           function $(a) {
             // sumbit
-            var b = a.customData, 
+            var b = a.customData,
               c = a.eventData,
               d = a.eventName;
             a = a.pixel;
@@ -8473,7 +8471,6 @@ fbq.pendingConfigs = ["global_config"];
               id: a ? a.id : null, // id: 639998956532516
               piiTranslator: null
             });
-            console.log('after e', data)
           }
 
           function la() {
