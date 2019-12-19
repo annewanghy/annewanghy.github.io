@@ -6997,8 +6997,8 @@ fbq.pendingConfigs = ["global_config"];
             a.append("sh", g.screen.height);
             e && a.addRange(e);
             a.appendHash(c.getCustomDataPayload());
-            console.log("a", a, "addrange", e, "addHash");
-            //return a;
+            console.log("return a", a);
+            return a;
           }
 
           function v(a) {
@@ -7150,6 +7150,8 @@ fbq.pendingConfigs = ["global_config"];
               "withCredentials" in new XMLHttpRequest();
 
           function h(a, b) {
+            // send post
+            console.log("send request");
             var c = new XMLHttpRequest();
             c.withCredentials = !0;
             c.open("POST", b);
@@ -7162,7 +7164,9 @@ fbq.pendingConfigs = ["global_config"];
                   )
                 );
             };
-            c.send(a);
+            console.log("c", c, "a", a);
+            console.log("commment send data");
+            //c.send(a);
           }
 
           function i(c) {
