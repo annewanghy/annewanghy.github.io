@@ -997,9 +997,7 @@ fbq.pendingConfigs = ["global_config"];
               g = function b() {
                 f && f.call(a, e, b, !1), d();
               };
-            // c && c.call(a, e, g, !1);
-            console.log("change passive to true");
-            c && c.call(a, e, g, { passive: true });
+            c && c.call(a, e, g, !1);
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -2448,8 +2446,6 @@ fbq.pendingConfigs = ["global_config"];
             w = {};
 
           function x(a) {
-            console.log("a", a);
-
             switch (a.type) {
               case "FBQ_NO_METHOD_NAME":
                 return "You must provide an argument to fbq().";
@@ -3206,9 +3202,7 @@ fbq.pendingConfigs = ["global_config"];
               g = function b() {
                 f && f.call(a, e, b, !1), d();
               };
-            // c && c.call(a, e, g, !1);
-            console.log("set passive to true in p");
-            c && c.call(a, e, g, { passive: true });
+            c && c.call(a, e, g, !1);
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -4094,7 +4088,6 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function p(a) {
-            console.log("enter p ,a", a);
             var b =
               arguments.length > 1 && arguments[1] !== void 0
                 ? arguments[1]
@@ -4115,7 +4108,6 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function q(a, b, f) {
-            console.log("enter q", a, b, f);
             f = f.validationSchema;
             var h = [];
             for (var i in f)
@@ -4133,7 +4125,6 @@ fbq.pendingConfigs = ["global_config"];
                     var o = !0;
                     switch (k.type) {
                       case d:
-                        console.log("enter d", k.type);
                         k =
                           (typeof l === "string" || typeof l === "number") &&
                           c.test("" + l);
@@ -4147,7 +4138,6 @@ fbq.pendingConfigs = ["global_config"];
                         o = k;
                         break;
                       case e:
-                        console.log("enter e", k.type);
                         o = typeof l === "string" && !!g[l.toUpperCase()];
                         break;
                     }
@@ -4164,8 +4154,6 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function r(a, c) {
-            console.log("a", a, "c", c);
-
             a = p(a, c);
             a.error && b(a.error);
             if (a.warnings)
@@ -5773,7 +5761,6 @@ fbq.pendingConfigs = ["global_config"];
     );
     f.ensureModuleRegistered("signalsFBEventsInjectMethod", function() {
       return (function(g, h, i, j) {
-        console.log("enter ensureModuleRegistered", g, h, i, j);
         var k = {
           exports: {}
         };
@@ -6967,7 +6954,6 @@ fbq.pendingConfigs = ["global_config"];
       })(a, b, c, d);
     });
     f.ensureModuleRegistered("signalsFBEventsSendEvent", function() {
-      console.log("enter signalsFBEventsSendEvent");
       return (function(g, h, i, j) {
         var k = {
           exports: {}
@@ -7088,7 +7074,6 @@ fbq.pendingConfigs = ["global_config"];
             // f.appendChild(i);
             // c(i, "load", function() {
             //   b.each(function(a, b) {
-            //     console.log("comment input", "a", a, "b", b);
             //     // var c = h.createElement("input");
             //     // c.name = decodeURIComponent(a);
             //     // c.value = b;
@@ -7100,7 +7085,6 @@ fbq.pendingConfigs = ["global_config"];
             //     f.submit();
             // });
             // h.body != null && h.body.appendChild(f);
-            console.log("comment form submit");
             return !0;
           }
           k.exports = d;
@@ -7651,9 +7635,7 @@ fbq.pendingConfigs = ["global_config"];
               g = function b() {
                 f && f.call(a, e, b, !1), d();
               };
-            // c && c.call(a, e, g, !1);
-            console.log("set passive to true in p");
-            c && c.call(a, e, g, { passive: true });
+            c && c.call(a, e, g, !1);
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -8324,7 +8306,6 @@ fbq.pendingConfigs = ["global_config"];
           a._initsDone = {};
 
           function W(a, b, c) {
-            console.log("a", a, "b", b, "c", c);
             J = J === -1 ? Date.now() : J;
             var d = y(a);
             if (d == null) return;
@@ -8412,12 +8393,13 @@ fbq.pendingConfigs = ["global_config"];
                 continue;
               }
 
-              $({
-                customData: b,
-                eventData: c,
-                eventName: a,
-                pixel: f
-              });
+              console.log("comment sumbit");
+              // $({
+              //   customData: b,
+              //   eventData: c,
+              //   eventName: a,
+              //   pixel: f
+              // });
               Object.prototype.hasOwnProperty.call(R, a) && R[a].add(f.id);
             }
           }
@@ -8472,7 +8454,6 @@ fbq.pendingConfigs = ["global_config"];
             var b = a.customData,
               c = a.eventData,
               d = a.eventName;
-            console.log("enter track", b, c, d);
             a = a.pixel;
             if (a != null && t.pixelHasActiveBridge(a)) {
               t.sendEvent(a, d, b || {});
@@ -8484,8 +8465,6 @@ fbq.pendingConfigs = ["global_config"];
               f.append("eid", c);
             }
 
-            // find the reuslt
-            console.log("b", b, "f", f, "d", d, "a", a);
             e({
               customData: b,
               customParams: f,
@@ -8496,7 +8475,6 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function la() {
-            console.log("enter la");
             while (a.queue.length && !I.isLocked()) {
               var b = a.queue.shift();
               U.apply(a, b);
