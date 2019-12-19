@@ -6984,20 +6984,22 @@ fbq.pendingConfigs = ["global_config"];
               e = a.customParams,
               f = a.eventName,
               j = a.id;
-            console.log("b", b);
-            // a = a.piiTranslator;
-            // a = new d(a);
-            // a.append("id", j);
-            // a.append("ev", f);
-            // a.append("dl", i.href);
-            // a.append("rl", h.referrer);
-            // a.append("if", s);
-            // a.append("ts", new Date().valueOf());
-            // a.append("cd", b);
-            // a.append("sw", g.screen.width);
-            // a.append("sh", g.screen.height);
-            // e && a.addRange(e);
-            // a.appendHash(c.getCustomDataPayload());
+            a = a.piiTranslator;
+            console.log("after a", a);
+            a = new d(a);
+            console.log("after new", a);
+            a.append("id", j);
+            a.append("ev", f);
+            a.append("dl", i.href);
+            a.append("rl", h.referrer);
+            a.append("if", s);
+            a.append("ts", new Date().valueOf());
+            a.append("cd", b);
+            a.append("sw", g.screen.width);
+            a.append("sh", g.screen.height);
+            e && a.addRange(e);
+            a.appendHash(c.getCustomDataPayload());
+            console.log("after all process", a);
             return a;
           }
 
@@ -7536,7 +7538,6 @@ fbq.pendingConfigs = ["global_config"];
             c = a.FBEventsCoercionError;
 
           function d(a) {
-            console.log("enter d", a);
             return function(d) {
               for (var e = 0; e < a.length; e++) {
                 var f = a[e];
@@ -8452,7 +8453,7 @@ fbq.pendingConfigs = ["global_config"];
 
           function $(a) {
             // sumbit
-            var b = a.customData,
+            var b = a.customData, 
               c = a.eventData,
               d = a.eventName;
             a = a.pixel;
@@ -8465,13 +8466,14 @@ fbq.pendingConfigs = ["global_config"];
               c = c.eventID;
               f.append("eid", c);
             }
-            e({
-              customData: b,
-              customParams: f,
-              eventName: d,
-              id: a ? a.id : null,
+            const data = e({
+              customData: b, // customData: null
+              customParams: f, // lots of imformation
+              eventName: d, // PageView
+              id: a ? a.id : null, // id: 639998956532516
               piiTranslator: null
             });
+            console.log('after e', data)
           }
 
           function la() {
