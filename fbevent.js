@@ -997,7 +997,10 @@ fbq.pendingConfigs = ["global_config"];
               g = function b() {
                 f && f.call(a, e, b, !1), d();
               };
-            c && c.call(a, e, g, !1);
+            // c && c.call(a, e, g, !1);
+            console.log("change listen once third params false");
+
+            c && c.call(a, e, g, !0);
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -7165,8 +7168,7 @@ fbq.pendingConfigs = ["global_config"];
                 );
             };
             console.log("c", c, "a", a);
-            console.log("commment send data");
-            //c.send(a);
+            c.send(a);
           }
 
           function i(c) {
