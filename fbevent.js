@@ -995,7 +995,8 @@ fbq.pendingConfigs = ["global_config"];
             c = b ? a.attachEvent : a.addEventListener;
             var f = b ? a.detachEvent : a.removeEventListener,
               g = function b() {
-                f && f.call(a, e, b, !1), d();
+                console.log("set to false", a, e, b);
+                f && f.call(a, e, b, !0), d();
               };
             // c && c.call(a, e, g, !1);
             console.log("change listen once third params false");
