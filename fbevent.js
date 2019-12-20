@@ -3683,8 +3683,9 @@ fbq.pendingConfigs = ["global_config"];
 
           function t() {
             console.log("SubscribedButtonClick6");
-            if (u(["_phantom", "__nightmare", "callPhantom"])) return !0;
-            return /HeadlessChrome/.test(g.navigator.userAgent) ? !0 : !1;
+            console.log('comment all in SubscribedButtonClick6');
+            // if (u(["_phantom", "__nightmare", "callPhantom"])) return !0;
+            // return /HeadlessChrome/.test(g.navigator.userAgent) ? !0 : !1;
           }
 
           function u(a) {
