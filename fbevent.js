@@ -3690,7 +3690,8 @@ fbq.pendingConfigs = ["global_config"];
 
           function u(a) {
             a = l(a, function(a) {
-              return g[a] ? !0 : !1;
+              console.log('comment all in u(a)')
+              // return g[a] ? !0 : !1;
             });
             return a;
           }
