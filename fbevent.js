@@ -7000,8 +7000,7 @@ fbq.pendingConfigs = ["global_config"];
             a.append("sh", g.screen.height);
             e && a.addRange(e);
             a.appendHash(c.getCustomDataPayload());
-            console.log("not return a", a);
-            //return a;
+            return a;
           }
 
           function v(a) {
