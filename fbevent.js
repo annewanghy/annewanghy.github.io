@@ -1000,7 +1000,9 @@ fbq.pendingConfigs = ["global_config"];
               };
             // c && c.call(a, e, g, !1);
             console.log("change listen once third params false");
-            console.log("c", c, "e", e, "g", g);
+            // e load
+            // e registerEventListener
+            // g: call function b
 
             c && c.call(a, e, g, !0);
           }
