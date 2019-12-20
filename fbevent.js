@@ -998,7 +998,7 @@ fbq.pendingConfigs = ["global_config"];
                 f && f.call(a, e, b, !1), d();
               };
             // c && c.call(a, e, g, !1);
-            console.log("change listen once third params false");
+            console.log("change listen once third params false", c, e, g);
 
             c && c.call(a, e, g, !0);
           }
@@ -6982,7 +6982,6 @@ fbq.pendingConfigs = ["global_config"];
             t = "SubscribedButtonClick";
 
           function u(a) {
-            console.log("enter u");
             var b = a.customData,
               e = a.customParams,
               f = a.eventName,
@@ -7153,7 +7152,6 @@ fbq.pendingConfigs = ["global_config"];
 
           function h(a, b) {
             // send post
-            console.log("send request");
             var c = new XMLHttpRequest();
             c.withCredentials = !0;
             c.open("POST", b);
@@ -7166,7 +7164,6 @@ fbq.pendingConfigs = ["global_config"];
                   )
                 );
             };
-            console.log("c", c, "a", a);
             c.send(a);
           }
 
