@@ -2255,10 +2255,11 @@ fbq.pendingConfigs = ["global_config"];
             return f != null && b != null && d != null ? [f, b, d] : null;
           }
           b = new b(d);
+          console.log("log b 2", b, d);
           l.exports = b;
         })();
         return l.exports;
-      })(a, b, c, d);
+      })(a, b, c, d); // window, document, location, history2
     });
     f.ensureModuleRegistered(
       "SignalsFBEventsGetCustomParametersEvent",
