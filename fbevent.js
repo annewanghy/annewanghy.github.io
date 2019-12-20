@@ -410,6 +410,8 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t(a) {
+            // SubscribedButtonClick
+            console.log("SubscribedButtonClick2", a);
             if (r) return;
             q("[Facebook Pixel] - " + a);
           }
@@ -789,6 +791,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t(a) {
+            console.log("SubscribedButtonClick3");
             return function(b) {
               return y(b, F.array()).map(a);
             };
@@ -995,12 +998,9 @@ fbq.pendingConfigs = ["global_config"];
             c = b ? a.attachEvent : a.addEventListener;
             var f = b ? a.detachEvent : a.removeEventListener,
               g = function b() {
-                console.log(a, e, b);
-                console.log("set remove eventlistener", f);
                 f && f.call(a, e, b, !1), d();
               };
 
-            console.log("set addeventlistener", c);
             c && c.call(a, e, g, !1);
           }
           var q = Object.prototype.hasOwnProperty,
@@ -1726,7 +1726,6 @@ fbq.pendingConfigs = ["global_config"];
                     c = function() {
                       b && b();
                       b = null;
-                      console.log('arguments', arguments);
                       return a.apply(void 0, arguments);
                     };
                   b = this.listen(c);
@@ -2441,6 +2440,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t(a) {
+            console.log("SubscribedButtonClick4");
             if (r) return;
             q("[Facebook Pixel] - " + a);
           }
@@ -3000,6 +3000,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t(a) {
+            console.log("SubscribedButtonClick5");
             return function(b) {
               return y(b, F.array()).map(a);
             };
@@ -3205,7 +3206,6 @@ fbq.pendingConfigs = ["global_config"];
             c = b ? a.attachEvent : a.addEventListener;
             var f = b ? a.detachEvent : a.removeEventListener,
               g = function b() {
-
                 f && f.call(a, e, b, !1), d();
               };
             c && c.call(a, e, g, !1);
@@ -3681,6 +3681,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t() {
+            console.log("SubscribedButtonClick6");
             if (u(["_phantom", "__nightmare", "callPhantom"])) return !0;
             return /HeadlessChrome/.test(g.navigator.userAgent) ? !0 : !1;
           }
@@ -4212,7 +4213,6 @@ fbq.pendingConfigs = ["global_config"];
                     c = function() {
                       b && b();
                       b = null;
-                      console.log('arguments2', arguments)
                       return a.apply(void 0, arguments);
                     };
                   b = this.listen(c);
@@ -4808,6 +4808,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t(a) {
+            console.log("SubscribedButtonClick7");
             var b = function(b) {
               return a(b);
             };
@@ -5567,13 +5568,15 @@ fbq.pendingConfigs = ["global_config"];
               (typeof e === "undefined" ? "undefined" : h(e)) === "object"
                 ? a({}, e)
                 : null;
+            console.log("enter d", "type:", b);
             return f != null && b != null && d != null ? [f, b, d] : null;
           }
           b = new b(d);
+          console.log("new b", "b", b, "d", d);
           l.exports = b;
         })();
         return l.exports;
-      })(a, b, c, d);
+      })(a, b, c, d); // window, document, location, history
     });
     f.ensureModuleRegistered("SignalsFBEventsFireLock", function() {
       return (function(g, h, j, k) {
@@ -5964,6 +5967,7 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t(a) {
+            console.log("SubscribedButtonClick8");
             if (r) return;
             q("[Facebook Pixel] - " + a);
           }
@@ -7080,7 +7084,6 @@ fbq.pendingConfigs = ["global_config"];
             i.name = e;
             f.appendChild(i);
             c(i, "load", function() {
-              console.log('enter load', i);
               b.each(function(a, b) {
                 var c = h.createElement("input");
                 c.name = decodeURIComponent(a);
@@ -7396,6 +7399,8 @@ fbq.pendingConfigs = ["global_config"];
           }
 
           function t(a) {
+            // SubscribedButtonClick
+            console.log("enter SubscribedButtonClick");
             return function(b) {
               return y(b, F.array()).map(a);
             };
