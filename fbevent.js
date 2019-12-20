@@ -998,7 +998,8 @@ fbq.pendingConfigs = ["global_config"];
                 f && f.call(a, e, b, !1), d();
               };
             // c && c.call(a, e, g, !1);
-            console.log("change listen once third params false", c, e, g);
+            console.log("change listen once third params false");
+            console.log("c", c, "e", e, "g", g);
 
             c && c.call(a, e, g, !0);
           }
