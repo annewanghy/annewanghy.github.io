@@ -995,16 +995,13 @@ fbq.pendingConfigs = ["global_config"];
             c = b ? a.attachEvent : a.addEventListener;
             var f = b ? a.detachEvent : a.removeEventListener,
               g = function b() {
-                console.log("set to false", a, e, b);
-                f && f.call(a, e, b, !0), d();
+                console.log(a, e, b);
+                console.log("set remove eventlistener", f);
+                f && f.call(a, e, b, !1), d();
               };
-            // c && c.call(a, e, g, !1);
-            console.log("change listen once third params false");
-            // e load
-            // e registerEventListener
-            // g: call function b
 
-            c && c.call(a, e, g, !0);
+            console.log("set addeventlistener", c);
+            c && c.call(a, e, g, !1);
           }
           var q = Object.prototype.hasOwnProperty,
             r = !{
@@ -1729,6 +1726,7 @@ fbq.pendingConfigs = ["global_config"];
                     c = function() {
                       b && b();
                       b = null;
+                      console.log('arguments', arguments);
                       return a.apply(void 0, arguments);
                     };
                   b = this.listen(c);
@@ -3207,6 +3205,7 @@ fbq.pendingConfigs = ["global_config"];
             c = b ? a.attachEvent : a.addEventListener;
             var f = b ? a.detachEvent : a.removeEventListener,
               g = function b() {
+
                 f && f.call(a, e, b, !1), d();
               };
             c && c.call(a, e, g, !1);
@@ -4213,6 +4212,7 @@ fbq.pendingConfigs = ["global_config"];
                     c = function() {
                       b && b();
                       b = null;
+                      console.log('arguments2', arguments)
                       return a.apply(void 0, arguments);
                     };
                   b = this.listen(c);
@@ -7080,6 +7080,7 @@ fbq.pendingConfigs = ["global_config"];
             i.name = e;
             f.appendChild(i);
             c(i, "load", function() {
+              console.log('enter load', i);
               b.each(function(a, b) {
                 var c = h.createElement("input");
                 c.name = decodeURIComponent(a);
