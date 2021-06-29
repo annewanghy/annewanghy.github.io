@@ -1,10 +1,18 @@
-### Use Google Tag Manager to manager third-party codes
-such as 
+---
+layout: post
+title: "Use Google Tag Manager to manager third-party codes"
+date: 2021-06-1 19:47:55 +0800
+categories: Analytics Tools
+---
+
+such as
+
 1. Google Analytics
 2. Google Ads
 3. Google Optimize
 
 ### How it works
+
 1. first google tagmanager need to install some codes in your side
 2. it will generate a variable called `dataLayer` in browser
 3. you can use `dataLayer.push()` to put data in this variable

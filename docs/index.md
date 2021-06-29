@@ -1,3 +1,5 @@
-## Welcome to the real world, it sucks, you're gonna love it
+---
+layout: home
+---
 
-![image](https://user-images.githubusercontent.com/18532655/115682954-8825f200-a388-11eb-97cd-f6c2827ed70a.png)
+## Welcome to the real world, it sucks, you're gonna love it
