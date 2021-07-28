@@ -76,3 +76,21 @@ xxxx
 1. SectionList
 2. FlatList
    both of them are been wrapped by `ScrollView`, so they are scrollable
+   
+   
+### 如何加阴影
+props:
+```
+shadowColor: Sets the drop shadow color.
+shadowOffset: Sets the drop shadow offset.
+shadowOpacity: Sets the drop shadow opacity (multiplied by the color’s alpha component).
+shadowRadius: Sets the drop shadow blur radius.
+```
+
+栗子
+```
+shadowColor: "#000",
+shadowOpacity: 0.4,
+shadowRadius: 10,
+shadowOffset: { width: 0, height: 10 },
+```
