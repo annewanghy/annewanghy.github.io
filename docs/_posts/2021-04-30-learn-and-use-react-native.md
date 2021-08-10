@@ -94,3 +94,19 @@ shadowOpacity: 0.4,
 shadowRadius: 10,
 shadowOffset: { width: 0, height: 10 },
 ```
+
+### 如何在点击外部view层关闭dropdown
+方法就是在View的onTouchEnd的时候关闭dropdown
+```jsx
+const [showSorter, setShowSorter] = useState(false);
+
+<View
+onTouchEnd={() => {
+   if (showSorter) {
+     setShowSorter(false);
+   }
+}}
+>
+{showSorter && <SorterContent />}
+</View>
+```
