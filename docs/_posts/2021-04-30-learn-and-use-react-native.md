@@ -110,3 +110,9 @@ onTouchEnd={() => {
 {showSorter && <SorterContent />}
 </View>
 ```
+
+### 怎么查看ipad的log
+首先需要准备一根连接线,把电脑和iPad连接起来,然后可以打开xcode -> window -> Devices and simulator, 选中iPad, 打开console就可以log啦 
+![image](https://user-images.githubusercontent.com/18532655/129028726-ddf0144d-aeae-4af3-9cc0-9b57d5e33c6b.png)
+![image](https://user-images.githubusercontent.com/18532655/129028347-19942ad7-725c-4249-86f9-ddc00055ef84.png)
+![image](https://user-images.githubusercontent.com/18532655/129028452-93a15d54-9cfb-43b3-81ec-db510e85e24e.png)
