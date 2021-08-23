@@ -19,4 +19,6 @@ categories: Learning
    <key>UIUserInterfaceStyle</key>
    <string>Light</string>
    ```
+2. 怎么在模拟器上开启dark mode
+![image](https://user-images.githubusercontent.com/18532655/130399204-e8345182-18f5-4c42-8fbc-b3910bf019e5.png)
 
