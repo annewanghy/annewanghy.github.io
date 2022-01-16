@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Adapt Dark Mode"
+title: "How to Adapt Dark Mode (draft: only disable part)"
 date: 2021-08-17 19:47:55 +0800
 categories: Learning
 
