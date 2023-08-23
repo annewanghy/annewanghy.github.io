@@ -13,5 +13,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: get data
     - run: echo ${{secrets.TOKEN}}
