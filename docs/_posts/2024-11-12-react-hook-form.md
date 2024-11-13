@@ -1,3 +1,11 @@
+---
+layout: post
+title: "learn react-hook-form"
+date: 2024-11-12 15:47:55 +0800
+categories: Learning
+---
+
+
 1. `type=number|date` (validateAsNumber|validateAsDate)
 2. touched表示被触碰过, dirty表示和之前的value不一样(touchFields|dirtyFields|isDirty)
 3. mode: onSumit(default)|onTouched|onChange|all
