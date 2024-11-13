@@ -23,9 +23,10 @@ I'm a frontend engineer
 1. Google Tag Manager
 2. Google Analytics, enhances ecommerce part
 3. Google Optimize
+4. GA 4
 
 ### Work Experiences
-1. 2018 - now : developing and maintain on a [website](https://www.lacoste.jp) which frontend developed by next.js and react 
-2. 2019 - now : developing and maintain on a [website](https://www.aigle.co.jp) which frontend developed by golang and jquery, react
+1. 2018 - now : developing and maintain on a website which frontend developed by next.js and react 
+2. 2019 - now : developing and maintain on a website which frontend developed by golang and jQuery, react
 4. 2020 - now : help maintain google tag manager and google analytics and other third library data helper tools
 4. 2021.5 - now : developing an app developed by react-native
