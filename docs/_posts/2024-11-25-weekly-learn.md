@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Safari Special List"
+title: "24-11-05 weekly learn"
 date: 2024-11-25 19:47:55 +0800
 categories: Learning
 ---
