@@ -31,3 +31,17 @@ categories: Learning
    ```
    9. 测试的目的: 是为了让后面重构的时候, 可以更加安全避免改坏
    10. mock函数, 使用`jest.fn()`或者`vi.fn()`
+   11. 今天又学会两个写法, 一个是`fireEvent`, 一个是`waitFor` from `@testing-library/react`
+   12. fireEvent可以模拟click和change方法, 比如
+    ```js
+    fireEvent.change(getByLabelText("address name"), {
+	 target: { value: "address name" },
+    });
+	```
+   13. waitFor可以用来做async的异步事件, 比如
+	```js
+	 await waitFor(() => {
+	  expect(sumbitHandler).toHaveBeenCalledTimes(1);
+	  expect(sumbitHandler).toHaveBeenCalledWith(mockIdAddress);
+	 });
+  	```
